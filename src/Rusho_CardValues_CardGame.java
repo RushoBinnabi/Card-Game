@@ -18,10 +18,8 @@ public enum Rusho_CardValues_CardGame {
     TEN(10, "10"), JACK(10, "Jack"), QUEEN(10, "Queen"),
     KING(10, "King");
 
-    // creates the enums for the different face value that the cards might have.
-
-    int card_value; // an integer variable called card_value gets created.
-    String card_value_string; // a string variable called card_value_string gets created.
+    int card_value;
+    String card_value_string;
 
     /**
      * the constructor sets the face values for the cards an an integer and as an string.
@@ -30,8 +28,8 @@ public enum Rusho_CardValues_CardGame {
      */
 
     private Rusho_CardValues_CardGame(int card_value, String card_value_string) {
-        this.card_value = card_value; // the face value of the cards from the arguement gets set to the card_value variable.
-        this.card_value_string = card_value_string; // the face value of the cards as a string from the arguement gets set equal to the card_value_string variable.
+        this.card_value = card_value; 
+        this.card_value_string = card_value_string;
     }
 
     /**
@@ -40,7 +38,7 @@ public enum Rusho_CardValues_CardGame {
      */
 
     public int getCard_Value() {
-        return card_value; // returns the face values of the cards.
+        return card_value;
     }
 
     /**
@@ -49,7 +47,7 @@ public enum Rusho_CardValues_CardGame {
      */
 
     public String displayCard_Value() {
-        return card_value_string; // returns the face values of the cards as a string.
+        return card_value_string;
     }
 
 
