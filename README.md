@@ -1,6 +1,6 @@
 # Card Game
 
-This is a simple card game using Java.
+This repository contains the code for a simple card game using Java.
 
 ---
 
