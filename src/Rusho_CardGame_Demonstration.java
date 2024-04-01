@@ -18,33 +18,33 @@ public class Rusho_CardGame_Demonstration {
      */
 
     public static void main(String[] args) {
-        String command; // a string variable called command gets created which has the value of whether the user wants to "play the game" again or not.
-        do { // the code will run as long as command doesn't have "no" or "No" in it.
-            System.out.println(""); // creates some line spacing.yes
-            Scanner userinput = new Scanner(System.in); // creates a scanner object called userinput to get the user input of whether the user wants to "play the game" again or not.
-            Rusho_Deck_CardGame deck = new Rusho_Deck_CardGame(); // creates a deck object called deck that is the deck of cards.
+        String command; 
+        do {
+            System.out.println("");
+            Scanner userinput = new Scanner(System.in); 
+            Rusho_Deck_CardGame deck = new Rusho_Deck_CardGame(); 
             deck.deal_card(); // the method call to the deal_card method deals the cards to the deck.
             deck.shuffle_cards(); // using the shuffle method, it shuffles the deck of cards.
 
-            Rusho_CardPlayer_CardGame hand1, hand2; // creates 2 hand objects from the card player class object called hand1 and hand2.
-            hand1 = new Rusho_CardPlayer_CardGame(); // hand1 gets created as a new card player class object.
-            hand2 = new Rusho_CardPlayer_CardGame(); // hand2 gets created as a new card player class object.
-            Rusho_CardPlayer_CardGame[] hands = {hand1, hand2}; // an array called hands that is from the card player class has the 2 hand objects, hand1 and hand2, in it.
+            Rusho_CardPlayer_CardGame hand1, hand2; 
+            hand1 = new Rusho_CardPlayer_CardGame();
+            hand2 = new Rusho_CardPlayer_CardGame();
+            Rusho_CardPlayer_CardGame[] hands = {hand1, hand2};
 
             deck.dealcards(hands, 5); // this deck method call deals 5 cards to the hands.
 
-            for (Rusho_CardPlayer_CardGame hand : hands) { // this enhanced for loop says that for each hand for the number of hands.
-                System.out.println(""); // creates some line spacing.
-                System.out.println(hand.showCardPlayerHand()); // shows the cards in each hand.
+            for (Rusho_CardPlayer_CardGame hand : hands) {
+                System.out.println("");
+                System.out.println(hand.showCardPlayerHand());
             }
-            System.out.println(""); // creates some line spacing.
-            System.out.print("Do you want to play again? Yes or no: "); // asks the user if they want to play again.
-            command = userinput.next(); // stores the command inside the command variable.
-            if (command.equals("no") || command.equals("No")) { // if the value inside the command variable is equal to "No" or "no".
-                userinput.close(); // closes the scanner object.
-                System.exit(0); // exits the program.
+            System.out.println("");
+            System.out.print("Do you want to play again? Yes or no: ");
+            command = userinput.next();
+            if (command.equals("no") || command.equals("No")) {
+                userinput.close();
+                System.exit(0);
             }
-        } while (command.equals("Yes") || command.equals("yes")); // the code will run as long as the user wants to play again.
+        } while (command.equals("Yes") || command.equals("yes"));
 
     }
 }
