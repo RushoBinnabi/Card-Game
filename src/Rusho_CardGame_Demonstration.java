@@ -38,13 +38,14 @@ public class Rusho_CardGame_Demonstration {
                 System.out.println(hand.showCardPlayerHand());
             }
             System.out.println("");
-            System.out.print("Do you want to play again? Yes or no: ");
+            System.out.print("Do you want to play again (y/n)? ");
             command = userinput.next();
-            if (command.equals("no") || command.equals("No")) {
+	    System.out.print("\033\143"); // clears the screen.	
+            if (command.equals("n")) {
                 userinput.close();
                 System.exit(0);
             }
-        } while (command.equals("Yes") || command.equals("yes"));
+        } while (command.equals("y"));
 
     }
 }
