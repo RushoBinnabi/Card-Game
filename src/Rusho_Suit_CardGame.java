@@ -10,12 +10,12 @@ public enum Rusho_Suit_CardGame {
      * this class creates the suit values for the cards using enums.
      */
 
-    CLUBS("Clubs"), // creates an enum card suit value for club cards.
-    DIAMONDS("Diamonds"), // creates an enum card suit value for diamond cards.
-    HEARTS("Hearts"), // creates an enum card suit value for heart cards.
-    SPADES("Spades"); // creates an enum card suit value for spade cards.
+    CLUBS("Clubs"),
+    DIAMONDS("Diamonds"),
+    HEARTS("Hearts"),
+    SPADES("Spades");
 
-    String suit_text; // creates a string variable called suit_text.
+    String suit_text;
 
     /**
      * the constructor sets the value of the suit_text variable.
@@ -23,7 +23,7 @@ public enum Rusho_Suit_CardGame {
      */
 
     private Rusho_Suit_CardGame(String suit_text) {
-        this.suit_text = suit_text; // the suit value for the cards as a string gets set to the suit_text variable.
+        this.suit_text = suit_text;
     }
 
     /**
@@ -32,7 +32,7 @@ public enum Rusho_Suit_CardGame {
      */
 
     public String getSuit_Text() {
-        return suit_text; // returns the suit value of the cards.
+        return suit_text;
     }
 
 }
