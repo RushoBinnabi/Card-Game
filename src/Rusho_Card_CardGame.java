@@ -10,8 +10,8 @@ public class Rusho_Card_CardGame {
      * this class acts as a card in a deck of cards for the card game.
      */
 
-    public Rusho_Suit_CardGame suit; // creates a public suit object for the card called suit.
-    public Rusho_CardValues_CardGame value; // creates a public face value for the card called value.
+    public Rusho_Suit_CardGame suit;
+    public Rusho_CardValues_CardGame value;
 
     /**
      * the constructor gets a face value and a suit value for the card and puts it inside the value and suit variables.
@@ -20,8 +20,8 @@ public class Rusho_Card_CardGame {
      */
 
     public Rusho_Card_CardGame(Rusho_CardValues_CardGame val, Rusho_Suit_CardGame suit) {
-        this.value = val; // using the this keyword, it takes the face value from the arguement and puts it into the value variable.
-        this.suit = suit; // using the this keyword, it takes the suit value from the arguement and puts in into the suit variable.
+        this.value = val;
+        this.suit = suit;
     }
 
     /**
@@ -30,7 +30,7 @@ public class Rusho_Card_CardGame {
      */
 
     public String getSuitValue() {
-        return suit.getSuit_Text(); // returns the suit value of the card as a string.
+        return suit.getSuit_Text();
     }
 
     /**
@@ -39,7 +39,7 @@ public class Rusho_Card_CardGame {
      */
 
     public int getCardValue() {
-        return value.getCard_Value(); // returns the face value of the card as an integer.
+        return value.getCard_Value();
     }
 
     /**
@@ -48,7 +48,7 @@ public class Rusho_Card_CardGame {
      */
 
     public String displayCardValue() {
-        return value.displayCard_Value(); // returns the current face value of the card.
+        return value.displayCard_Value();
     }
 
     /**
@@ -57,8 +57,8 @@ public class Rusho_Card_CardGame {
      */
 
     public String toString() {
-        String str = ""; // creates a string variable called str that gets initialized to an empty string.
-        str += value.displayCard_Value() + " of " + suit.getSuit_Text(); // it adds the value of the face and suit of the card.
-        return str; // returns str.
+        String str = "";
+        str += value.displayCard_Value() + " of " + suit.getSuit_Text();
+        return str;
     }
 }
